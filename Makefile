@@ -4,7 +4,7 @@ BUILDDIR = build
 MANDIR   = man
 
 TARGET   = bash
-PREFIX   = /usr/local
+#PREFIX   = /usr/local
 
 .PHONY: default clean build release grip test check install uninstall
 
@@ -15,6 +15,7 @@ clean:
 
 build:
 	@gawk -f build.awk build -target=$(TARGET)
+	termux-fix-shebang build/trans
 
 release:
 	@gawk -f build.awk build -target=$(TARGET) -type=release
