@@ -15,11 +15,11 @@ BEGIN {
         assertEqual(Rlwrap, "rlwrap")
     }
 
-    T("Emacs", 1)
-    {
-        initEmacs()
-        assertEqual(Emacs, "emacs")
-    }
+   # T("Emacs", 1)
+   # {
+    #    initEmacs()
+    #    assertEqual(Emacs, "emacs")
+    #}
 
     T("newerVersion()", 5)
     {
